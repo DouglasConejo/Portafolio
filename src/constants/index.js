@@ -194,13 +194,14 @@ const curriculum = [
   {
     name: "Curriculum in Spanish",
     image: cvSpanish,
-    source_code_link: "https://app.cvwinner.com/share/837f584f576f4c4fba24730e6efb7751",
+    source_code_link: "https://drive.google.com/drive/u/0/folders/1-ZbASEA_MJ1L24Trabv1NhV2K8Ox3Ird",
   },
   {
     name: "Curriculum in English",
     image: cvEnglish,
-    source_code_link: "https://app.cvwinner.com/share/10137d22402d4bb0ad45b1c0a29a26f3",
+    source_code_link: "https://drive.google.com/drive/u/0/folders/1-ZbASEA_MJ1L24Trabv1NhV2K8Ox3Ird",
   },
+  
 ];
 
 

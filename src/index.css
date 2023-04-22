@@ -56,11 +56,15 @@
 .black-gradient {
   background-color:#FFECC5;
 }
+
 /* Fond  */
 .relative-z-0-bg-primary {
   background-color: #001f35 ;
 }
 
+.mt-text-flex{
+  
+}
 .black-gradient {
   background: #023047; /* fallback for old browsers #023047 */
   background: -webkit-linear-gradient(
