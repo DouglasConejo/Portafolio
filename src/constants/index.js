@@ -194,12 +194,12 @@ const curriculum = [
   {
     name: "Curriculum in Spanish",
     image: cvSpanish,
-    source_code_link: "https://drive.google.com/drive/u/0/folders/1-ZbASEA_MJ1L24Trabv1NhV2K8Ox3Ird",
+    source_code_link: "https://drive.google.com/file/d/1_NgIzqCW9A5utjnJSPfdNIiDnGz0dg45/view?usp=sharing",
   },
   {
     name: "Curriculum in English",
     image: cvEnglish,
-    source_code_link: "https://drive.google.com/drive/u/0/folders/1-ZbASEA_MJ1L24Trabv1NhV2K8Ox3Ird",
+    source_code_link: "https://drive.google.com/file/d/1YAMGvIwetJl5KhDfaxriy5_Y44ojJtLv/view?usp=sharing",
   },
   
 ];
