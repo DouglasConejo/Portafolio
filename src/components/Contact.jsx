@@ -31,12 +31,12 @@ const Contact = () => {
         "template_1t76uxq",
         {
           form_name: form.name,
-          to_name: "Douglas",
+          to_name: " ",
           from_email: form.email,
           to_email: "douglas.conejo2002@gmail.com",
           message: form.message,
         },
-        "Jqq9AvwIuSjoMiA5c"
+        " "
       )
       .then(
         () => {
@@ -67,7 +67,7 @@ const Contact = () => {
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h3 className={styles.sectionHeadText}>Contact</h3>
 
         <form
           ref={formRef}

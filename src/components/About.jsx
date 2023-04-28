@@ -47,7 +47,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-       Junior software engineer with experience in web development and
+       Software engineer with experience in web development and
        skills in programming languages ​​with projects that you carry out. Also
        I have skills in analysis and problem solving, and I consider myself a
        effective collaborator in work teams
