@@ -10,7 +10,8 @@ import {
   Tech,
   Works,
   StarsCanvas,
-  Curriculum
+  Curriculum,
+  ExperienceWork
 } from "./components";
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         <About />  
         <Experience />    
         <Tech />
+        <ExperienceWork/>
         <Works />
         <Curriculum />
         <Feedbacks />

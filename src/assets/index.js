@@ -31,13 +31,14 @@ import plsql from "./tech/PLSQL.png"
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import cenfotec from "./company/Cenfotec.png";
 import udemyLogo from "./company/UdemyLogo.png";
 import scrum from "./company/Scrum.png";
 import cvSpanish from "./company/cvSpanish.png";
 import cvEnglish from "./company/cvEnglish.png";
-
+import PETWARE from "./company/PETWARE.png";
+import Angular from "./tech/angular.png";
+import Gpg from "./company/GPG.png";
 
 
 import carrent from "./carrent.png";
@@ -71,7 +72,6 @@ export {
   meta,
   shopify,
   starbucks,
-  tesla,
   carrent,
   jobit,
   tripguide,
@@ -86,5 +86,8 @@ export {
   azure,
   plsql,
   cvEnglish,
-  cvSpanish
+  cvSpanish,
+  PETWARE,
+  Angular,
+  Gpg,
 };

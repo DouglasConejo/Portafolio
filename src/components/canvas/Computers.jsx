@@ -7,6 +7,22 @@ import CanvasLoader from "../Loader";
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
+    // Opcional: Verifica el contenido del modelo cargado
+    useEffect(() => {
+      if (computer && computer.scene) {
+        console.log("Escena cargada:", computer.scene);
+        console.log("Geometría:", computer.scene.children);
+      }
+    }, [computer]);
+  
+    // Recalcula la esfera envolvente si es necesario
+    useEffect(() => {
+      if (computer.scene.geometry) {
+        computer.scene.updateWorldMatrix(true, false); // Actualiza la matriz mundial antes de calcular la esfera envolvente
+        computer.scene.geometry.computeBoundingSphere(); // Asegúrate de que la geometría esté presente
+      }
+    }, [computer]);
+    
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor="Blue" />

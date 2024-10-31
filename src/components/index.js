@@ -9,6 +9,8 @@ import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import Curriculum from "../components/Curriculum";
+import ExperienceWork from "../components/ExperienceWork";
+
 
 
 
@@ -23,8 +25,9 @@ export {
   Contact,
   CanvasLoader,
   EarthCanvas, 
-  BallCanvas, 
+  BallCanvas,
   ComputersCanvas, 
   StarsCanvas,
-  Curriculum
+  Curriculum,
+  ExperienceWork
 };

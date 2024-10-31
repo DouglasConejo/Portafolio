@@ -13,6 +13,7 @@ import {
   mongodb,
   git,
   figma,
+  PETWARE,
   cSharp,
   aws,
   carrent,
@@ -23,7 +24,9 @@ import {
   cenfotec,
   scrum,
   java,
-  net
+  net,
+  Angular,
+  Gpg
 } from "../assets";
 
 export const navLinks = [
@@ -37,7 +40,11 @@ export const navLinks = [
   },
   {
     id: "work",
-    title: "knowledge",
+    title: "Knowledge",
+  },
+  {
+    id: "experienceWork",
+    title: "Experience",
   },
   {
     id: "contact",
@@ -117,6 +124,10 @@ const technologies = [
     name: "aws",
     icon: aws,
   },
+  {
+    name:"angular",
+    icon: Angular,
+  }
 ];
 
 const experiences = [
@@ -135,7 +146,7 @@ const experiences = [
     company_name: "Udemy",
     icon: udemyLogo,
     iconBg: "#E6DEDD",
-    date: "January 2023 - Present",
+    date: "January 2024 - Present",
     points: [
       "This course aims to take you from zero knowledge of React to a competitive level in today's work environment. This course is built 100% on Hooks and functional components.",
     ],
@@ -148,6 +159,19 @@ const experiences = [
     date: "Setember 2022 - December 2022",
     points: [
       "'Scrum Fundamentals Certified' course is tailored to help anyone interested to know more about Scrum; learn about key concepts in Scrum as defined in the SBOK.",
+    ],
+  },
+];
+
+const experiencesWork = [
+  {
+    title: "Global Professional Group",
+    company_name: "Professional practice",
+    icon: Gpg,
+    iconBg: "#383E56",
+    date: "January 2024 - April",
+    points: [
+      "In this job I focused on the support area of ​​an already created system. Powered by Aura Quantic, C# and Azure technologies.",
     ],
   },
 ];
@@ -193,20 +217,53 @@ const projects = [
     image: carrent,
     source_code_link: "https://master.d2btlx6fey7xvz.amplifyapp.com",
   },
+  {
+    name: "PETWARE",
+    description:
+      "This was a group project involving 4 people. The project was not completed due to time constraints and economic factors, but good progress was demonstrated. The purpose of the project was to provide medical follow-up for pets. It had a vaccine history, a PayPal-based shopping system, a tracker module that allowed us to view the location of the pet using a GPS provided by the university, and basic functions such as update, delete, and add. ",
+    tags: [
+      {
+        name: "Angular",
+        color: "green-text-gradient",
+      },
+      {
+        name: "AWS",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "MySqL",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JAVA",
+        color: "red-text-gradient",
+      },
+      {
+        name: "SpringBoot",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JMeter",
+        color: "yellow-text-gradient",
+      },
+    ],
+    image: PETWARE,
+    source_code_link: "http://petware-application.s3-website-us-east-1.amazonaws.com/",
+  },
 ];
 const curriculum = [
   {
     name: "Curriculum in Spanish",
     image: cvSpanish,
-    source_code_link: "https://drive.google.com/file/d/1_NgIzqCW9A5utjnJSPfdNIiDnGz0dg45/view?usp=sharing",
+    source_code_link: "https://drive.google.com/file/d/1EQt1vK3fBX4OLcWn_BrDSoq77UHztJtn/view?usp=sharing",
   },
   {
     name: "Curriculum in English",
     image: cvEnglish,
-    source_code_link: "https://drive.google.com/file/d/1YAMGvIwetJl5KhDfaxriy5_Y44ojJtLv/view?usp=sharing",
+    source_code_link: "https://drive.google.com/file/d/1YE2vNa2L6CoTXhOd5RiaDZpltVSexo_Z/view?usp=sharing",
   },
   
 ];
 
 
-export { services, technologies, experiences, testimonials, projects, curriculum };
+export { services, technologies, experiences, testimonials, projects, curriculum, experiencesWork };
