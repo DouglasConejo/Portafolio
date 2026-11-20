@@ -7,56 +7,57 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+const contactEmail = "douglas.conejo2002@gmail.com";
+
 const Contact = () => {
-  const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [sendError, setSendError] = useState("");
+  const [sent, setSent] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setSendError("");
+    setSent(false);
 
-    emailjs
-      .send(
+    try {
+      await emailjs.send(
         "service_3i6glkj",
         "template_sl19frk",
         {
           form_name: form.name,
-          to_name: " ",
+          to_name: "Douglas",
           from_email: form.email,
-          to_email: "douglas.conejo2002@gmail.com",
+          to_email: contactEmail,
           message: form.message,
         },
         "6e5jJVlV_cUgq9MOa"
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-
-          console.log(error);
-          alert("Something went wrong.");
-        }
       );
+      setSent(true);
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS contact form failed:", error);
+      setSendError(error?.text || error?.message || "Unknown error");
+    } finally {
+      setLoading(false);
+    }
   };
+
+  const emailFallback = `mailto:${contactEmail}?subject=${encodeURIComponent(
+    `Portfolio contact from ${form.name}`
+  )}&body=${encodeURIComponent(
+    `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+  )}`;
 
   return (
     <div
@@ -70,7 +71,6 @@ const Contact = () => {
         <h3 className={styles.sectionHeadText}>Contact</h3>
 
         <form
-          ref={formRef}
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
         >
@@ -79,6 +79,7 @@ const Contact = () => {
             <input
               type="text"
               name="name"
+              required
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
@@ -90,6 +91,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
+              required
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
@@ -101,6 +103,7 @@ const Contact = () => {
             <textarea
               rows={7}
               name="message"
+              required
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
@@ -110,10 +113,37 @@ const Contact = () => {
 
           <button
             type="submit"
+            disabled={loading}
             className="bg-tertiary4 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
           >
             {loading ? "Sending..." : "Send"}
           </button>
+          {sent && (
+            <p role="status" className="text-green-400">
+              Thanks! Your message has been sent.
+            </p>
+          )}
+          {sendError && (
+            <div role="alert" className="text-secondary">
+              <p>
+                The form couldn't send your message. The link opens an email
+                draft; review it and press Send in your email app.
+              </p>
+              <a className="text-white underline" href={emailFallback}>
+                Open an email draft
+              </a>
+              <p className="mt-2">
+                Or email me directly at{" "}
+                <a className="text-white underline" href={`mailto:${contactEmail}`}>
+                  {contactEmail}
+                </a>
+                .
+              </p>
+              {import.meta.env.DEV && (
+                <p className="mt-2 text-sm">EmailJS error: {sendError}</p>
+              )}
+            </div>
+          )}
         </form>
       </motion.div>
 

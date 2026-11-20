@@ -34,9 +34,10 @@ import starbucks from "./company/starbucks.png";
 import cenfotec from "./company/Cenfotec.png";
 import udemyLogo from "./company/UdemyLogo.png";
 import scrum from "./company/Scrum.png";
-import cvSpanish from "./company/cvSpanish.png";
-import cvEnglish from "./company/cvEnglish.png";
 import PETWARE from "./company/PETWARE.png";
+import nodoHacker from "./company/El Nodo Hacker_ Red Tecnológica y Sombra.png";
+import tta from "./company/Logotipo TTA en degradado azul y morado.png";
+import pfizer from "./company/Pfizer.png";
 import Angular from "./tech/angular.png";
 import Gpg from "./company/GPG.png";
 
@@ -85,9 +86,10 @@ export {
   sql,
   azure,
   plsql,
-  cvEnglish,
-  cvSpanish,
   PETWARE,
+  nodoHacker,
+  tta,
+  pfizer,
   Angular,
   Gpg,
 };

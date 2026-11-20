@@ -2,43 +2,15 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
+import { textVariant } from "../utils/motion";
+import { languages } from "../constants";
 
-const FeedbackCard = ({
-  index,
-  testimonial,
-  name,
-  designation,
-  company,
-  image,
-}) => (
+const LanguageCard = ({ name, level }) => (
   <motion.div
-    variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className="bg-black-blue -200 p-10 rounded-3xl xs:w-[320px] w-full"
+    className="bg-tertiary2 p-8 rounded-3xl xs:w-[320px] w-full"
   >
-    <p className="text-white font-black text-[50px]">"</p>
-
-    <div className="mt-1">
-      <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
-
-      <div className="mt-7 flex justify-between items-center gap-1">
-        <div className="flex-1 flex flex-col">
-          <p className="text-white font-medium text-[16px]">
-            <span className="blue-text-gradient"></span> {name}
-          </p>
-          <p className="mt-1 text-secondary text-[15px]">
-            {designation}  {company}
-          </p>
-        </div>
-
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className="w-10 h-10 rounded-full object-cover"
-        />
-      </div>
-    </div>
+    <h3 className="text-white font-bold text-[20px]">{name}</h3>
+    <p className="mt-2 text-secondary text-[16px]">{level}</p>
   </motion.div>
 );
 
@@ -49,13 +21,13 @@ const Feedbacks = () => {
         className={`${styles.padding} bg-tertiary3 rounded-2xl min-h-[300px]`}
       >
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}> </p>
-          <h2 className={styles.sectionHeadText}>Lenguanges</h2>
+          <p className={styles.sectionSubText}>Languages spoken</p>
+          <h2 className={styles.sectionHeadText}>Languages</h2>
         </motion.div>
       </div>
       <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+        {languages.map((language) => (
+          <LanguageCard key={language.name} {...language} />
         ))}
       </div>
     </div>

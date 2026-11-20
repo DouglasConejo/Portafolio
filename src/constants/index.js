@@ -3,30 +3,30 @@ import {
   backend,
   creator,
   web,
-  javascript,
   html,
   css,
+  javascript,
   reactjs,
-  redux,
-  cvEnglish,
-  cvSpanish,
+  typescript,
   mongodb,
   git,
-  figma,
   PETWARE,
   cSharp,
   aws,
   carrent,
-  plsql,
+  jobit,
+  tripguide,
   sql,
   azure,
-  udemyLogo,
   cenfotec,
   scrum,
   java,
   net,
   Angular,
-  Gpg
+  Gpg,
+  nodoHacker,
+  tta,
+  pfizer,
 } from "../assets";
 
 export const navLinks = [
@@ -35,12 +35,20 @@ export const navLinks = [
     title: "Home",
   },
   {
+    id: "summary",
+    title: "Summary",
+  },
+  {
     id: "about",
     title: "About",
   },
   {
     id: "work",
-    title: "Knowledge",
+    title: "Education",
+  },
+  {
+    id: "tech",
+    title: "Skills",
   },
   {
     id: "experienceWork",
@@ -54,35 +62,39 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Software Engineering",
     icon: web,
   },
   {
-    title: "Frontend Developer",
+    title: "Software Quality & Validation",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Test Automation",
     icon: backend,
   },
   {
-    title: "Database Developer",
+    title: "API & Backend Development",
     icon: creator,
   },
 ];
 
 const technologies = [
   {
-    name: "HTML 5",
+    name: "HTML",
     icon: html,
   },
   {
-    name: "CSS 3",
+    name: "CSS",
     icon: css,
   },
   {
     name: "JavaScript",
     icon: javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
   },
   {
     name: "Java",
@@ -97,12 +109,24 @@ const technologies = [
     icon: net,
   },
   {
-    name: "Azure Devops",
+    name: "Azure",
     icon: azure,
   },
   {
-    name: "PLSQL",
-    icon: plsql,
+    name: "AWS",
+    icon: aws,
+  },
+  {
+    name: "C#",
+    icon: cSharp,
+  },
+  {
+    name: "Angular",
+    icon: Angular,
+  },
+  {
+    name: "Git",
+    icon: git,
   },
   {
     name: "MongoDB",
@@ -112,86 +136,99 @@ const technologies = [
     name: "SQL",
     icon: sql,
   },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "cSharp",
-    icon: cSharp,
-  },
-  {
-    name: "aws",
-    icon: aws,
-  },
-  {
-    name:"angular",
-    icon: Angular,
-  }
 ];
 
 const experiences = [
   {
-    title: "CENFOTEC",
-    company_name: "University",
+    title: "Bachelor's Degree in Software Engineering",
+    company_name: "CENFOTEC University",
     icon: cenfotec,
     iconBg: "#383E56",
-    date: "January 2021 - Present",
+    date: "2021 - 2025",
     points: [
-      "The university's focus on computing and informatics, through six specialized schools, covers all areas with current issues: information systems, information technologies, the Internet of Things, data sciences, cyber-physical systems, cybersecurity, computer engineering. software, artificial intelligence, web development, etc.",
+      "Completed a Bachelor's Degree in Software Engineering.",
     ],
   },
   {
-    title: "React course",
-    company_name: "Udemy",
-    icon: udemyLogo,
+    title: "Cybersecurity Studies",
+    company_name: "El Nodo Hacker",
+    icon: nodoHacker,
     iconBg: "#E6DEDD",
-    date: "January 2024 - Present",
+    date: "September 2026 - April 2027 · 7-month program, in progress",
     points: [
-      "This course aims to take you from zero knowledge of React to a competitive level in today's work environment. This course is built 100% on Hooks and functional components.",
+      "Expanding knowledge in cybersecurity, risk assessment, and security fundamentals.",
     ],
   },
   {
-    title: "Scrum Fundamental Certification",
-    company_name: "Shopify",
+    title: "Advanced Automation Certificate",
+    company_name: "AuraQuantic",
+    icon: scrum,
+    iconBg: "#E6DEDD",
+    date: "Certification",
+    points: [
+      "Advanced automation certification.",
+    ],
+  },
+  {
+    title: "Scrum Fundamentals Certified",
+    company_name: "Scrum",
     icon: scrum,
     iconBg: "#383E56",
-    date: "Setember 2022 - December 2022",
+    date: "Certification",
     points: [
-      "'Scrum Fundamentals Certified' course is tailored to help anyone interested to know more about Scrum; learn about key concepts in Scrum as defined in the SBOK.",
+      "Certification in Scrum fundamentals and the Scrum framework.",
     ],
   },
 ];
 
 const experiencesWork = [
   {
-    title: "Global Professional Group",
-    company_name: "Professional practice",
+    title: "Developer / QA",
+    company_name: "TTA Tech Talent Alliance",
+    icon: tta,
+    iconBg: "#383E56",
+    date: "May 2024 - April 2026",
+    points: [
+      "Developed and maintained applications and backend services, including REST APIs.",
+      "Improved reliability, maintainability, and performance by analyzing system behavior.",
+      "Supported CI/CD, deployments, and releases; contributed to automated validation with Playwright and Cypress.",
+      "Performed end-to-end testing, API validation, and data consistency checks with QA and development teams.",
+    ],
+  },
+  {
+    title: "IT Intern",
+    company_name: "Global Professional Group",
     icon: Gpg,
     iconBg: "#383E56",
-    date: "January 2024 - April",
+    date: "January 2024 - May 2024",
     points: [
-      "In this job I focused on the support area of ​​an already created system. Powered by Aura Quantic, C# and Azure technologies.",
+      "Developed backend services using Java and Spring Boot.",
+      "Automated existing processes, reducing manual workload by approximately 30%.",
+      "Investigated technical issues and supported system maintenance and operational improvements.",
+    ],
+  },
+  {
+    title: "Junior Developer",
+    company_name: "Pfizer",
+    icon: pfizer,
+    iconBg: "#383E56",
+    date: "January 2022 - October 2022",
+    points: [
+      "Designed REST APIs with Spring Boot and C#/.NET and built full-stack applications with Angular and relational databases.",
+      "Modernized legacy desktop applications using WPF.",
+      "Integrated cloud-based solutions using Azure and AWS.",
     ],
   },
 ];
 
-const testimonials = [
+const languages = [
   {
-    testimonial:
-      "English",
-    name: "Dyned Certification ",
-    designation: "Nivel Intermedio",
-    company: "B1+",
-    image: "http://web2.dyned.com/us/news/dynedbranding/images/newlogo.png",
+    name: "Spanish",
+    level: "Native",
   },
   {
-    testimonial:
-      "Spanish",
-    name: " ",
-    designation: "Native ",
-    company: " ",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Costa_Rica.svg/1200px-Flag_of_Costa_Rica.svg.png",
+    name: "English",
+    level: "Intermediate (B2)",
   },
 ];
 
@@ -220,7 +257,7 @@ const projects = [
   {
     name: "PETWARE",
     description:
-      "This was a group project involving 4 people. The project was not completed due to time constraints and economic factors, but good progress was demonstrated. The purpose of the project was to provide medical follow-up for pets. It had a vaccine history, a PayPal-based shopping system, a tracker module that allowed us to view the location of the pet using a GPS provided by the university, and basic functions such as update, delete, and add. ",
+      "Collaborative pet-management platform built with Angular and Spring Boot. Includes REST APIs, AWS Cognito authentication, and PayPal payment integration. The project was not completed.",
     tags: [
       {
         name: "Angular",
@@ -250,20 +287,59 @@ const projects = [
     image: PETWARE,
     source_code_link: "http://petware-application.s3-website-us-east-1.amazonaws.com/",
   },
+  {
+    name: "Legal Case Management System",
+    description:
+      "At Prieto & Asociados, supported application workflow validation, API response and frontend/backend data checks, and automated user-flow testing with Playwright and TypeScript.",
+    tags: [
+      {
+        name: "Playwright",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "API Testing",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: jobit,
+  },
+  {
+    name: "Enterprise System Simulation Support",
+    description:
+      "At Astrix Technology Group, validated UI behavior, API integrations, and data workflows; analyzed system architecture and integration points and automated scenarios with Playwright and Cypress.",
+    tags: [
+      {
+        name: "Playwright",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Cypress",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Quality Engineering",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: tripguide,
+  },
 ];
-const curriculum = [
+const profiles = [
   {
-    name: "Curriculum in Spanish",
-    image: cvSpanish,
-    source_code_link: "https://drive.google.com/file/d/1EQt1vK3fBX4OLcWn_BrDSoq77UHztJtn/view?usp=sharing",
+    name: "GitHub",
+    description: "Source code and software projects",
+    url: "https://github.com/DouglasConejo",
   },
   {
-    name: "Curriculum in English",
-    image: cvEnglish,
-    source_code_link: "https://drive.google.com/file/d/1YE2vNa2L6CoTXhOd5RiaDZpltVSexo_Z/view?usp=sharing",
+    name: "LinkedIn",
+    description: "Professional profile",
+    url: "https://www.linkedin.com/in/douglas-conejo-6234a4238",
   },
-  
 ];
 
 
-export { services, technologies, experiences, testimonials, projects, curriculum, experiencesWork };
+export { services, technologies, experiences, languages, projects, profiles, experiencesWork };
